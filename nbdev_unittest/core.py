@@ -53,40 +53,5 @@ class NotebookParser(object):
     def export_string(self):
         return "#| hide \nimport nbdev; nbdev.nbdev_export()"
     
-    # def parse_module(self, index_str):
-    #     fname = self.module_filename(index_str)
-
-    #     # create a new empty notebook
-    #     nb = new_notebook()  
-
-    #     # add markdown
-
-    #     # add a code cells
-    #     cell1 = new_code_cell(self.default_exp_module_string)
-    #     nb['cells'].append(cell1)
-
-    #     cell2_string = "#| export \ndef foo(): pass"
-    #     cell2 = new_code_cell(cell2_string)
-    #     nb['cells'].append(cell2)
-
-    #     cell3_string = (f"#| export {self.unittest_module_string}\n"
-    #                     "\n"
-    #                     "import unittest\n"
-    #                     "\n"
-    #                     f"class {self.unittest_class_string}(unittest.TestCase):\n"
-    #                     f"   def test_foo(self): pass\n")
-
-    #     cell3 = new_code_cell(cell3_string)
-    #     nb['cells'].append(cell3)
-
-    #     cell4_string = ("#| eval: false\n"
-    #         "#| hide\n"
-    #         "\n"
-    #         "unittest.main(argv=[''], verbosity=2, exit=False)\n")
-    #     cell4 = new_code_cell(cell4_string)
-    #     nb['cells'].append(cell4)
-
-        
-    #     cell5 = new_code_cell(self.export_string)
-    #     nb['cells'].append(cell5)
+  
 
