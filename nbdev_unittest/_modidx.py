@@ -5,4 +5,5 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://MJBishop.github.io',
                 'git_url': 'https://github.com/MJBishop/nbdev-unittest',
                 'lib_path': 'nbdev_unittest'},
-  'syms': {'nbdev_unittest.core': {'nbdev_unittest.core.foo': ('core.html#foo', 'nbdev_unittest/core.py')}}}
+  'syms': { 'nbdev_unittest.core': {'nbdev_unittest.core.foo': ('core.html#foo', 'nbdev_unittest/core.py')},
+            'nbdev_unittest.tests.test_core': {}}}
