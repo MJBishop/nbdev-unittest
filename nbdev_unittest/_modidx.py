@@ -6,4 +6,7 @@ d = { 'settings': { 'branch': 'main',
                 'git_url': 'https://github.com/MJBishop/nbdev-unittest',
                 'lib_path': 'nbdev_unittest'},
   'syms': { 'nbdev_unittest.core': {'nbdev_unittest.core.foo': ('core.html#foo', 'nbdev_unittest/core.py')},
-            'nbdev_unittest.tests.test_core': {}}}
+            'nbdev_unittest.tests.test_core': { 'nbdev_unittest.tests.test_core.TestCore': ( 'core.html#testcore',
+                                                                                             'nbdev_unittest/tests/test_core.py'),
+                                                'nbdev_unittest.tests.test_core.TestCore.test_foo': ( 'core.html#testcore.test_foo',
+                                                                                                      'nbdev_unittest/tests/test_core.py')}}}
