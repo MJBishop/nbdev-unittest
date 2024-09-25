@@ -81,11 +81,12 @@ class NotebookParser(object):
 
     #     cell4_string = ("#| eval: false\n"
     #         "#| hide\n"
+    #         "\n"
     #         "unittest.main(argv=[''], verbosity=2, exit=False)\n")
     #     cell4 = new_code_cell(cell4_string)
     #     nb['cells'].append(cell4)
 
         
-    #     cell5 = new_code_cell(export_string())
+    #     cell5 = new_code_cell(self.export_string)
     #     nb['cells'].append(cell5)
 
