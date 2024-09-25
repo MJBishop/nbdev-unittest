@@ -26,3 +26,7 @@ class TestNotebookParser(unittest.TestCase):
     def test_default_exp_module_string(self):
         notebook_parser = NotebookParser(self.test_module_name)
         self.assertEqual(notebook_parser.default_exp_module_string, '#| default_exp moduleA')
+    
+    def test_unittest_class_string(self):
+        notebook_parser = NotebookParser(self.test_module_name)
+        self.assertEqual(notebook_parser.unittest_class_string, 'TestModuleA')

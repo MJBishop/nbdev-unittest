@@ -37,4 +37,8 @@ class NotebookParser(object):
     @property
     def default_exp_module_string(self):
         return f'#| default_exp {self._module_name}'
+    
+    @property
+    def unittest_class_string(self):
+        return f'Test{self._module_name[0].upper() + self._module_name[1:]}'
 
