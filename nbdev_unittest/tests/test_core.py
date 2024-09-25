@@ -10,14 +10,19 @@ from ..core import *
 import unittest
 
 class TestNotebookParser(unittest.TestCase):
+
+    def setUp(self):
+        self.test_module_name = 'moduleA'
+        self.test_index_str = '02'
     
     def test_repo_string(self):
-        notebook_parser = NotebookParser()
+        notebook_parser = NotebookParser(self.test_module_name)
         self.assertEqual(notebook_parser.repo_string, 'nbdev_unittest')
     
     def test_module_filename(self):
-        test_index_str = '02'
-        test_module_name = 'ModuleA'
-        
-        notebook_parser = NotebookParser()
-        self.assertEqual(notebook_parser.module_filename(test_index_str, test_module_name), '02_ModuleA.ipynb')
+        notebook_parser = NotebookParser(self.test_module_name)
+        self.assertEqual(notebook_parser.module_filename(self.test_index_str), '02_moduleA.ipynb')
+    
+    def test_default_exp_module_string(self):
+        notebook_parser = NotebookParser(self.test_module_name)
+        self.assertEqual(notebook_parser.default_exp_module_string, '#| default_exp moduleA')

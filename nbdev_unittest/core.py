@@ -16,7 +16,8 @@ class NotebookParser(object):
     """
     NotebookParser
     """
-    def __init__(self):
+    def __init__(self, module_name):
+        self._module_name = module_name
         self._repo_string = None
 
     @property
@@ -29,7 +30,11 @@ class NotebookParser(object):
             self._repo_string = lib_path
         return self._repo_string
     
-    def module_filename(self, index_str, module_name):
+    def module_filename(self, index_str):
         """str: Return the module filename."""
-        return f"{index_str}_{module_name}.ipynb"
+        return f"{index_str}_{self._module_name}.ipynb"
+    
+    @property
+    def default_exp_module_string(self):
+        return f'#| default_exp {self._module_name}'
 
