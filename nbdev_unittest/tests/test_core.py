@@ -14,3 +14,10 @@ class TestNotebookParser(unittest.TestCase):
     def test_repo_string(self):
         notebook_parser = NotebookParser()
         self.assertEqual(notebook_parser.repo_string, 'nbdev_unittest')
+    
+    def test_module_filename(self):
+        test_index_str = '02'
+        test_module_name = 'ModuleA'
+        
+        notebook_parser = NotebookParser()
+        self.assertEqual(notebook_parser.module_filename(test_index_str, test_module_name), '02_ModuleA.ipynb')

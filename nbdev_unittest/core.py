@@ -21,11 +21,15 @@ class NotebookParser(object):
 
     @property
     def repo_string(self):
-        """str: Return the repository string."""
+        """str: Return the repository name."""
         if self._repo_string == None:
             configure = ConfigParser() 
             configure.read('settings.ini') 
             lib_path = configure.get('DEFAULT','lib_path')
             self._repo_string = lib_path
         return self._repo_string
+    
+    def module_filename(self, index_str, module_name):
+        """str: Return the module filename."""
+        return f"{index_str}_{module_name}.ipynb"
 
