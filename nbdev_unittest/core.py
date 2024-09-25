@@ -41,4 +41,44 @@ class NotebookParser(object):
     @property
     def unittest_class_string(self):
         return f'Test{self._module_name[0].upper() + self._module_name[1:]}'
+    
+    @property
+    def unittest_module_string(self):
+        return f'tests/test_{self._module_name}'
+    
+    # def parse_module(self, index_str):
+    #     fname = self.module_filename(index_str)
+
+    #     # create a new empty notebook
+    #     nb = new_notebook()  
+
+    #     # add markdown
+
+    #     # add a code cells
+    #     cell1 = new_code_cell(self.default_exp_module_string)
+    #     nb['cells'].append(cell1)
+
+    #     cell2_string = "#| export \ndef foo(): pass"
+    #     cell2 = new_code_cell(cell2_string)
+    #     nb['cells'].append(cell2)
+
+    #     cell3_string = (f"#| export {test_module(module_name)}\n"
+    #                     "\n"
+    #                     "import unittest\n"
+    #                     "\n"
+    #                     f"class {default_test_class_string_for_module(module_name)}(unittest.TestCase):\n"
+    #                     f"   def test_foo(self): pass\n")
+
+    #     cell3 = new_code_cell(cell3_string)
+    #     nb['cells'].append(cell3)
+
+    #     cell4_string = ("#| eval: false\n"
+    #         "#| hide\n"
+    #         "unittest.main(argv=[''], verbosity=2, exit=False)\n")
+    #     cell4 = new_code_cell(cell4_string)
+    #     nb['cells'].append(cell4)
+
+        
+    #     cell5 = new_code_cell(export_string())
+    #     nb['cells'].append(cell5)
 

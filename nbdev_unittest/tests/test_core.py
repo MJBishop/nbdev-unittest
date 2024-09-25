@@ -30,3 +30,7 @@ class TestNotebookParser(unittest.TestCase):
     def test_unittest_class_string(self):
         notebook_parser = NotebookParser(self.test_module_name)
         self.assertEqual(notebook_parser.unittest_class_string, 'TestModuleA')
+
+    def test_unittest_module_string(self):
+        notebook_parser = NotebookParser(self.test_module_name)
+        self.assertEqual(notebook_parser.unittest_module_string, 'tests/test_moduleA')
