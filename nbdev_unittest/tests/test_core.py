@@ -34,3 +34,7 @@ class TestNotebookParser(unittest.TestCase):
     def test_unittest_module_string(self):
         notebook_parser = NotebookParser(self.test_module_name)
         self.assertEqual(notebook_parser.unittest_module_string, 'tests/test_moduleA')
+
+    def test_export_string(self):
+        notebook_parser = NotebookParser(self.test_module_name)
+        self.assertEqual(notebook_parser.export_string, '#| hide \nimport nbdev; nbdev.nbdev_export()')

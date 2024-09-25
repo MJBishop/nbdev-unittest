@@ -36,15 +36,22 @@ class NotebookParser(object):
     
     @property
     def default_exp_module_string(self):
+        """str: Return the 'default_exp' module string."""
         return f'#| default_exp {self._module_name}'
     
     @property
     def unittest_class_string(self):
+        """str: Return the unittest class string."""
         return f'Test{self._module_name[0].upper() + self._module_name[1:]}'
     
     @property
     def unittest_module_string(self):
+        """str: Return the unittest module string."""
         return f'tests/test_{self._module_name}'
+    
+    @property
+    def export_string(self):
+        return "#| hide \nimport nbdev; nbdev.nbdev_export()"
     
     # def parse_module(self, index_str):
     #     fname = self.module_filename(index_str)
@@ -62,11 +69,11 @@ class NotebookParser(object):
     #     cell2 = new_code_cell(cell2_string)
     #     nb['cells'].append(cell2)
 
-    #     cell3_string = (f"#| export {test_module(module_name)}\n"
+    #     cell3_string = (f"#| export {self.unittest_module_string}\n"
     #                     "\n"
     #                     "import unittest\n"
     #                     "\n"
-    #                     f"class {default_test_class_string_for_module(module_name)}(unittest.TestCase):\n"
+    #                     f"class {self.unittest_class_string}(unittest.TestCase):\n"
     #                     f"   def test_foo(self): pass\n")
 
     #     cell3 = new_code_cell(cell3_string)
