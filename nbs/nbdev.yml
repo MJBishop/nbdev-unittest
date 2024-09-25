@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "nbdev-unittest"
+  site-url: "https://MJBishop.github.io/nbdev-unittest"
+  description: "Python package for testing nbdev packages with unittest"
+  repo-branch: main
+  repo-url: "https://github.com/MJBishop/nbdev-unittest"
