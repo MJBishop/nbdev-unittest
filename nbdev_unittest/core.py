@@ -5,13 +5,13 @@
 # %% auto 0
 __all__ = ['NotebookParser']
 
-# %% ../nbs/01_core.ipynb 3
+# %% ../nbs/01_core.ipynb 2
 import nbformat
 from nbformat.v4 import new_notebook, new_markdown_cell, new_code_cell
 
 from configparser import ConfigParser 
 
-# %% ../nbs/01_core.ipynb 4
+# %% ../nbs/01_core.ipynb 3
 class NotebookParser(object):
     """
     NotebookParser

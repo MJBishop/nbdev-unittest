@@ -6,10 +6,10 @@ __all__ = ['TestNotebookParser']
 # %% ../../nbs/00_test_core.ipynb 1
 from ..core import *
 
-# %% ../../nbs/01_core.ipynb 5
+# %% ../../nbs/01_core.ipynb 4
 import unittest
 
-# %% ../../nbs/01_core.ipynb 6
+# %% ../../nbs/01_core.ipynb 5
 class TestNotebookParser(unittest.TestCase):
 
     def setUp(self):
