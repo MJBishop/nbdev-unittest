@@ -15,6 +15,8 @@ from configparser import ConfigParser
 class NotebookParser(object):
     """
     NotebookParser
+
+    
     """
     def __init__(self, module_name):
         self._module_name = module_name

@@ -9,6 +9,7 @@ from ..core import *
 # %% ../../nbs/01_core.ipynb 5
 import unittest
 
+# %% ../../nbs/01_core.ipynb 6
 class TestNotebookParser(unittest.TestCase):
 
     def setUp(self):
